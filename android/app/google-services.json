@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "676925257077",
+    "project_id": "nexia-club",
+    "storage_bucket": "nexia-club.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676925257077:android:008ac08932213e2e92cf3c",
+        "android_client_info": {
+          "package_name": "com.example.lesson3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVA_M5YQxIzYGOMV16fNenJtRfkEqPqPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
