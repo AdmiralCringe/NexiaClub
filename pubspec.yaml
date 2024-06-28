@@ -1,0 +1,41 @@
+name: lesson3
+description: A new Flutter project.
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # sqflite: ^2.0.0+3
+  # path: ^1.8.0
+
+  cupertino_icons: ^1.0.2
+  firebase_auth: ^5.1.0
+  firebase_storage: ^12.0.1
+  firebase_messaging: ^15.0.1
+  firebase_core: ^3.1.0
+  cloud_firestore: ^5.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/
+    - assets/images/cars/nexia1img.jpeg
+    - assets/images/cars/nexia2img.jpg
+    - assets/images/engine/
+
+  
+  fonts:
+    - family: Sarina
+      fonts: 
+        - asset: assets/fonts/Sarina-Regular.ttf
+
