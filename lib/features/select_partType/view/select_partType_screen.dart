@@ -3,18 +3,34 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class selectPartTypeScreen extends StatelessWidget{
-  const selectPartTypeScreen({super.key});
-
-  void main() async{
-    final FirebaseFirestore firebaseFirestore = FirebaseFirestore.
+  
+  @override
+  void initState() {
+    GiveCountItem();
   }
+
+  int _collectionCount = 0;
+  List<Map<String, dynamic>> _items = [];
+
   @override
   Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
         appBar: AppBarShow(),  
         body: Column(
-          ListView.separated(itemBuilder: itemBuilder, separatorBuilder: separatorBuilder, itemCount: itemCount)
+          children: [
+            ListView.separated(
+              separatorBuilder: (context, i) => const Divider(), 
+              itemCount: _collectionCount,
+              itemBuilder: (context, i){
+                return Column(
+                  children: [
+                    
+                  ],
+                );
+              }
+            ),
+          ],
         ), 
       )
     );
@@ -31,5 +47,10 @@ class selectPartTypeScreen extends StatelessWidget{
         ),
         centerTitle: true,
       );
+  }
+  Future<void> GiveCountItem() async {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    QuerySnapshot querySnapshot = await firestore.collection('root_collection').get();
+    _collectionCount = querySnapshot.size;
   }
 }
