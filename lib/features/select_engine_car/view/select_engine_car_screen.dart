@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson3/features/select_partType/view/select_partType_screen.dart';
 
 
 
@@ -81,14 +82,19 @@ class selectEngineCarScreen extends StatelessWidget {
               child: Column(
                 children: [
                   TextButton(
-                  onPressed: () {
-                    print(data);
-                  },
-                  child: Image.asset(
-                    data[0],
-                    width: 335,
-                    height: 194,
-                  ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                          builder: (context) => selectPartTypeScreen(),
+                          ),
+                        );
+                    },
+                    child: Image.asset(
+                      data[0],
+                      width: 335,
+                      height: 194,
+                    ),
                   ),
                   Text(data[1],
                   style: TextStyle(
